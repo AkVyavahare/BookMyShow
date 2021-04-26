@@ -1,0 +1,13 @@
+//
+//  BuildConfig.xcconfig
+//  BookMyShowDemo
+//
+//  Created by Akshay Vyavhare on 26/04/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+baseUrl = https://api.themoviedb.org/
+apiKey = aba90403debfd81a92233609f5598667
