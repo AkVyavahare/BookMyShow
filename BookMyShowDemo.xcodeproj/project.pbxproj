@@ -10,8 +10,6 @@
 		68672C0D1F9CF67CB5CE652C /* Pods_BookMyShowDemo_BookMyShowDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE064F3B92A71568D68194D3 /* Pods_BookMyShowDemo_BookMyShowDemoUITests.framework */; };
 		98D580A226354646000EEA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A126354646000EEA13 /* AppDelegate.swift */; };
 		98D580A426354646000EEA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A326354646000EEA13 /* SceneDelegate.swift */; };
-		98D580A626354646000EEA13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A526354646000EEA13 /* ViewController.swift */; };
-		98D580A926354646000EEA13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D580A726354646000EEA13 /* Main.storyboard */; };
 		98D580AB26354647000EEA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D580AA26354647000EEA13 /* Assets.xcassets */; };
 		98D580AE26354647000EEA13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D580AC26354647000EEA13 /* LaunchScreen.storyboard */; };
 		98D580B926354647000EEA13 /* BookMyShowDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580B826354647000EEA13 /* BookMyShowDemoTests.swift */; };
@@ -26,6 +24,7 @@
 		98D5812626374276000EEA13 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D5812526374276000EEA13 /* Movie.storyboard */; };
 		98D5812B26374288000EEA13 /* MovieStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5812A26374288000EEA13 /* MovieStoryboard.swift */; };
 		98D58130263742C7000EEA13 /* StoryboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5812F263742C7000EEA13 /* StoryboardRouter.swift */; };
+		98D5813C26374407000EEA13 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5813B26374407000EEA13 /* MovieListViewController.swift */; };
 		9D6C4E106A37EACCD1588540 /* Pods_BookMyShowDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDC5417D637681D1D3A9762 /* Pods_BookMyShowDemoTests.framework */; };
 		B3EB8F9012EA58DED58951BE /* Pods_BookMyShowDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6FA4F303E78E08C8BBB2AE /* Pods_BookMyShowDemo.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +55,6 @@
 		98D5809E26354646000EEA13 /* BookMyShowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMyShowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D580A126354646000EEA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D580A326354646000EEA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98D580A526354646000EEA13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		98D580A826354646000EEA13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98D580AA26354647000EEA13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98D580AD26354647000EEA13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98D580AF26354647000EEA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +75,7 @@
 		98D5812526374276000EEA13 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		98D5812A26374288000EEA13 /* MovieStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStoryboard.swift; sourceTree = "<group>"; };
 		98D5812F263742C7000EEA13 /* StoryboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRouter.swift; sourceTree = "<group>"; };
+		98D5813B26374407000EEA13 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		9BDC5417D637681D1D3A9762 /* Pods_BookMyShowDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookMyShowDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE064F3B92A71568D68194D3 /* Pods_BookMyShowDemo_BookMyShowDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookMyShowDemo_BookMyShowDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6FA4F303E78E08C8BBB2AE /* Pods_BookMyShowDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookMyShowDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,12 +223,19 @@
 		98D5811226373E3D000EEA13 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				98D580A526354646000EEA13 /* ViewController.swift */,
-				98D580A726354646000EEA13 /* Main.storyboard */,
-				98D5812526374276000EEA13 /* Movie.storyboard */,
-				98D5812A26374288000EEA13 /* MovieStoryboard.swift */,
+				98D58137263743DD000EEA13 /* Movie */,
 			);
 			path = Stories;
+			sourceTree = "<group>";
+		};
+		98D58137263743DD000EEA13 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				98D5812526374276000EEA13 /* Movie.storyboard */,
+				98D5812A26374288000EEA13 /* MovieStoryboard.swift */,
+				98D5813B26374407000EEA13 /* MovieListViewController.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		D617C0C66D0569D63CB7BEF9 /* Pods */ = {
@@ -366,7 +371,6 @@
 			files = (
 				98D580AE26354647000EEA13 /* LaunchScreen.storyboard in Resources */,
 				98D580AB26354647000EEA13 /* Assets.xcassets in Resources */,
-				98D580A926354646000EEA13 /* Main.storyboard in Resources */,
 				98D5812626374276000EEA13 /* Movie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,10 +499,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D580A626354646000EEA13 /* ViewController.swift in Sources */,
 				98D5810426373CDA000EEA13 /* BuildConfiguration.swift in Sources */,
 				98D5811726374070000EEA13 /* NetworkConstants.swift in Sources */,
 				98D580A226354646000EEA13 /* AppDelegate.swift in Sources */,
+				98D5813C26374407000EEA13 /* MovieListViewController.swift in Sources */,
 				98D580E426373976000EEA13 /* APIConfiguration.swift in Sources */,
 				98D580FF26373BA5000EEA13 /* Extensions.swift in Sources */,
 				98D580ED26373A85000EEA13 /* ErrorResponse.swift in Sources */,
@@ -542,14 +546,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98D580A726354646000EEA13 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98D580A826354646000EEA13 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98D580AC26354647000EEA13 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
