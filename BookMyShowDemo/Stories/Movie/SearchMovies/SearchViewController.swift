@@ -43,7 +43,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let results = viewModel.movieList?.results
         let filtered = results?.filter {
-            $0.title?.lowercased().split(separator: " ").first {$0.hasPrefix(searchText.lowercased())} != nil ||  $0.title?.range(of: searchText,options: .caseInsensitive) != nil 
+            $0.title?.lowercased().split(separator: " ").first {$0.hasPrefix(searchText.lowercased())} != nil
         }
         
         self.viewModel.filteredMovieList = filtered
