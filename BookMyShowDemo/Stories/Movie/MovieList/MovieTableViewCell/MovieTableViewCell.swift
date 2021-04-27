@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieTableViewCell: UITableViewCell {
 
@@ -14,6 +15,14 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var otherDetailsLabel: UILabel!
     @IBOutlet weak var backgroundContentView: UIView!
+    @IBOutlet weak var bookButton: CustomButton!
+    var bookButtonTap: (() -> Void)?
+    
+    var movie: Results? {
+        didSet {
+            updateUI()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -28,7 +37,15 @@ class MovieTableViewCell: UITableViewCell {
     
     func setupUI() {
         setupView()
+        setupLabels()
         setupImageView()
+        setupButtons()
+    }
+    
+    func setupLabels() {
+        movieTitleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        releaseDateLabel.font = UIFont.systemFont(ofSize: 15)
+        otherDetailsLabel.font = UIFont.systemFont(ofSize: 15)
     }
     
     func setupView() {
@@ -43,4 +60,24 @@ class MovieTableViewCell: UITableViewCell {
         self.movieImageView.layer.cornerRadius = 8.0
     }
     
+    func setupButtons() {
+        bookButton.setTitle(StringConstants.book, for: .normal)
+        bookButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        bookButton.setTitleColor(.white, for: .normal)
+        bookButton.addTarget(self, action: #selector(bookButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func bookButtonTapped() {
+        bookButtonTap?()
+    }
+    
+    func updateUI() {
+        self.movieTitleLabel.text = movie?.title ?? .empty
+        self.releaseDateLabel.text = movie?.releaseDate ?? .empty
+        self.otherDetailsLabel.text = movie?.overview ?? .empty
+        
+        let imageURL = URL(string: URLConstants.imageURL(imageName: movie?.posterPath ?? .empty))
+        self.movieImageView.sd_setImage(with: imageURL, completed: nil)
+    }
 }
+

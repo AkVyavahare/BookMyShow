@@ -9,5 +9,5 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 
-baseUrl = https://api.themoviedb.org/
+baseUrl = api.themoviedb.org/
 apiKey = aba90403debfd81a92233609f5598667

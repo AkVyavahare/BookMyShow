@@ -5,19 +5,25 @@
 //  Created by Akshay Vyavhare on 27/04/21.
 //
 
-import Foundation
-
-protocol MovieListViewModelDelegate: class {
-    func viewModelDidUpdate(_ viewModel: MovieListViewModel)
-}
-
-class MovieListViewModel {
-
-    weak var delegate: MovieListViewModelDelegate?
-
-    var apiSuccess: (() -> Void)?
-    var apiFailure: ((ErrorResponse) -> Void)?
+import UIKit
+extension MovieListViewController {
+    func setupUI() {
+        setupTableView()
+    }
     
-    init() {
+    func setupTableView() {
+        self.movieListTableView.register(MovieTableViewCell.self)
+        self.movieListTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        self.movieListTableView.delegate = self
+        self.movieListTableView.dataSource = self
+        self.movieListTableView.separatorStyle = .none
+        self.movieListTableView.separatorInset = .init(top: 0, left: 0, bottom: 0, right: 0)
+        self.movieListTableView.allowsSelection = true
+        self.movieListTableView.backgroundColor = UIColor.clear
+        self.movieListTableView.reloadData()
+    }
+    
+    func updateUI() {
+        self.movieListTableView.reloadData()
     }
 }

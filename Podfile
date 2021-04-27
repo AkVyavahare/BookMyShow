@@ -7,6 +7,7 @@ target 'BookMyShowDemo' do
 
   # Pods for BookMyShowDemo
 	pod 'Alamofire', '~> 5.2'
+ pod 'SDWebImage/WebP’
   target 'BookMyShowDemoTests' do
     inherit! :search_paths
     # Pods for testing

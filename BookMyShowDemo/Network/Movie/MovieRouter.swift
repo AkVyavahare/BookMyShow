@@ -1,0 +1,18 @@
+//
+//  MovieRouter.swift
+//  BookMyShowDemo
+//
+//  Created by Akshay Vyavhare on 27/04/21.
+//
+
+import Foundation
+class MovieRouter: APIClient {
+    
+    func getMovies(config: MovieConfiguration, completion: @escaping (Result<MovieList?, ErrorResponse>) -> Void) {
+        performRequest(config: config, decode: { (json) -> MovieList? in
+            guard let data = json as? MovieList else { return  nil }
+            return data
+        }, completion: completion)
+    }
+
+}

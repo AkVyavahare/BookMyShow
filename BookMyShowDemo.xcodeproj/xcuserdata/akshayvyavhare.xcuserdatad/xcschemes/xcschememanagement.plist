@@ -6,8 +6,28 @@
 	<dict>
 		<key>BookMyShowDemo.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>98D5809D26354646000EEA13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98D580B326354647000EEA13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98D580BE26354647000EEA13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
