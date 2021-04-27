@@ -12,6 +12,7 @@ class MovieListViewController: UIViewController {
     var viewModel = MovieListViewModel()
     
     @IBOutlet weak var movieListTableView: UITableView!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,15 @@ class MovieListViewController: UIViewController {
     
     @objc func bookButtonTapped() {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueSearchView" {
+            if let destVC = segue.destination as? SearchViewController {
+                destVC.viewModel = SearchViewModel()
+                destVC.viewModel.movieList = viewModel.movieList
+            }
+        }
     }
 }
 

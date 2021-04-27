@@ -22,7 +22,7 @@ enum MovieConfiguration: APIConfiguration {
     var path: String {
         switch self {
         case .getMovies:
-            return URLConstants.getMoviesUrl
+            return URLConstants.getMoviesUrl()
         }
     }
     

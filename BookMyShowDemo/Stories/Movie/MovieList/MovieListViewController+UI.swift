@@ -9,6 +9,7 @@ import UIKit
 extension MovieListViewController {
     func setupUI() {
         setupTableView()
+        setupNavigationBar()
     }
     
     func setupTableView() {
@@ -21,6 +22,10 @@ extension MovieListViewController {
         self.movieListTableView.allowsSelection = true
         self.movieListTableView.backgroundColor = UIColor.clear
         self.movieListTableView.reloadData()
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController?.title = StringConstants.movies
     }
     
     func updateUI() {

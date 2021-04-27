@@ -11,11 +11,13 @@ struct StringConstants {
     static let somethingWentWrong = "Something went wrong"
     static let apiKey = "aba90403debfd81a92233609f5598667"
     static let book = "Book"
+    static let movies = "Movies"
+    static let recentlySearched = "Recently Searched"
 }
 
 struct URLConstants {
     static let baseURL = "https://api.themoviedb.org/3/"
-    static let getMoviesUrl = "movie/now_playing?api_key=\(StringConstants.apiKey)"
+    static func getMoviesUrl() -> String {return "movie/now_playing?api_key=\(StringConstants.apiKey)"}
     static func imageURL(imageName: String) -> String {
         return "https://image.tmdb.org/t/p/w500/\(imageName)"
     }
