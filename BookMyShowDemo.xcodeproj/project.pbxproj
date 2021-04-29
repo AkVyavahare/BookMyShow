@@ -13,6 +13,7 @@
 		9831D3FB263B3EC900AA4A17 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D3F9263B3EC900AA4A17 /* RecentSearchTableViewCell.swift */; };
 		9831D3FC263B3EC900AA4A17 /* RecentSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9831D3FA263B3EC900AA4A17 /* RecentSearchTableViewCell.xib */; };
 		9831D405263B47CB00AA4A17 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D404263B47CB00AA4A17 /* Credits.swift */; };
+		9831D40A263B484D00AA4A17 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D409263B484D00AA4A17 /* Reviews.swift */; };
 		98D580A226354646000EEA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A126354646000EEA13 /* AppDelegate.swift */; };
 		98D580A426354646000EEA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A326354646000EEA13 /* SceneDelegate.swift */; };
 		98D580AB26354647000EEA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D580AA26354647000EEA13 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		9831D3F9263B3EC900AA4A17 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
 		9831D3FA263B3EC900AA4A17 /* RecentSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchTableViewCell.xib; sourceTree = "<group>"; };
 		9831D404263B47CB00AA4A17 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		9831D409263B484D00AA4A17 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		98D5809E26354646000EEA13 /* BookMyShowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMyShowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D580A126354646000EEA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D580A326354646000EEA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				98D581662637CCB6000EEA13 /* MovieList.swift */,
 				9831D3F4263B379000AA4A17 /* RecentSearches.swift */,
 				9831D404263B47CB00AA4A17 /* Credits.swift */,
+				9831D409263B484D00AA4A17 /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				98D5812B26374288000EEA13 /* MovieStoryboard.swift in Sources */,
 				9831D3F0263B347B00AA4A17 /* DatabaseHelper.swift in Sources */,
 				98D58141263745BB000EEA13 /* MovieListViewController+UI.swift in Sources */,
+				9831D40A263B484D00AA4A17 /* Reviews.swift in Sources */,
 				98D580A426354646000EEA13 /* SceneDelegate.swift in Sources */,
 				9831D405263B47CB00AA4A17 /* Credits.swift in Sources */,
 				98D580DF2637395F000EEA13 /* APIClient.swift in Sources */,
