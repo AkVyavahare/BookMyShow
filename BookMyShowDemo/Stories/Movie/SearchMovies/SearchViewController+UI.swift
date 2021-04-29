@@ -15,6 +15,7 @@ extension SearchViewController {
     
     func setupTableView() {
         self.moviesTableView.register(MovieTableViewCell.self)
+        self.moviesTableView.register(RecentSearchTableViewCell.self)
         self.moviesTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         self.moviesTableView.delegate = self
         self.moviesTableView.dataSource = self

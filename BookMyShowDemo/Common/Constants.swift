@@ -18,6 +18,18 @@ struct StringConstants {
 struct URLConstants {
     static let baseURL = "https://api.themoviedb.org/3/"
     static func getMoviesUrl() -> String {return "movie/now_playing?api_key=\(StringConstants.apiKey)"}
+    static func getSimilarMoviesUrl(movieId: Int) -> String {
+        return "/movie/\(movieId)/similar?api_key=\(StringConstants.apiKey)"
+    }
+    
+    static func getMovieCreditsUrl(movieId: Int) -> String {
+        return "/movie/\(movieId)/credits?api_key=\(StringConstants.apiKey)"
+    }
+    
+    static func getMovieReviewsUrl(movieId: Int) -> String {
+        return "/movie/\(movieId)/reviews?api_key=\(StringConstants.apiKey)"
+    }
+    
     static func imageURL(imageName: String) -> String {
         return "https://image.tmdb.org/t/p/w500/\(imageName)"
     }

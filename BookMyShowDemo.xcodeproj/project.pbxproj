@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		68672C0D1F9CF67CB5CE652C /* Pods_BookMyShowDemo_BookMyShowDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE064F3B92A71568D68194D3 /* Pods_BookMyShowDemo_BookMyShowDemoUITests.framework */; };
+		9831D3F0263B347B00AA4A17 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D3EF263B347B00AA4A17 /* DatabaseHelper.swift */; };
+		9831D3F5263B379000AA4A17 /* RecentSearches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D3F4263B379000AA4A17 /* RecentSearches.swift */; };
+		9831D3FB263B3EC900AA4A17 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D3F9263B3EC900AA4A17 /* RecentSearchTableViewCell.swift */; };
+		9831D3FC263B3EC900AA4A17 /* RecentSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9831D3FA263B3EC900AA4A17 /* RecentSearchTableViewCell.xib */; };
+		9831D405263B47CB00AA4A17 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831D404263B47CB00AA4A17 /* Credits.swift */; };
 		98D580A226354646000EEA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A126354646000EEA13 /* AppDelegate.swift */; };
 		98D580A426354646000EEA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D580A326354646000EEA13 /* SceneDelegate.swift */; };
 		98D580AB26354647000EEA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D580AA26354647000EEA13 /* Assets.xcassets */; };
@@ -66,6 +71,11 @@
 		4ED835B27388FFBD0E01DF61 /* Pods-BookMyShowDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMyShowDemoTests.release.xcconfig"; path = "Target Support Files/Pods-BookMyShowDemoTests/Pods-BookMyShowDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D016EE7D628B97783C92072 /* Pods-BookMyShowDemo-BookMyShowDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMyShowDemo-BookMyShowDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookMyShowDemo-BookMyShowDemoUITests/Pods-BookMyShowDemo-BookMyShowDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A50F6AC939C505EA01D6B1A /* Pods-BookMyShowDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMyShowDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-BookMyShowDemoTests/Pods-BookMyShowDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9831D3EF263B347B00AA4A17 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		9831D3F4263B379000AA4A17 /* RecentSearches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearches.swift; sourceTree = "<group>"; };
+		9831D3F9263B3EC900AA4A17 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
+		9831D3FA263B3EC900AA4A17 /* RecentSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchTableViewCell.xib; sourceTree = "<group>"; };
+		9831D404263B47CB00AA4A17 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		98D5809E26354646000EEA13 /* BookMyShowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMyShowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D580A126354646000EEA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D580A326354646000EEA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9831D400263B3ED600AA4A17 /* RecentSearch */ = {
+			isa = PBXGroup;
+			children = (
+				9831D3F9263B3EC900AA4A17 /* RecentSearchTableViewCell.swift */,
+				9831D3FA263B3EC900AA4A17 /* RecentSearchTableViewCell.xib */,
+			);
+			path = RecentSearch;
+			sourceTree = "<group>";
+		};
 		98D5809526354646000EEA13 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +226,8 @@
 			children = (
 				98D580EC26373A85000EEA13 /* ErrorResponse.swift */,
 				98D581662637CCB6000EEA13 /* MovieList.swift */,
+				9831D3F4263B379000AA4A17 /* RecentSearches.swift */,
+				9831D404263B47CB00AA4A17 /* Credits.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +241,7 @@
 				98D5812F263742C7000EEA13 /* StoryboardRouter.swift */,
 				98D581612637483E000EEA13 /* UITableViewExtension.swift */,
 				98D581F12637E6EE000EEA13 /* CustomButton.swift */,
+				9831D3EF263B347B00AA4A17 /* DatabaseHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,6 +320,7 @@
 				98D5824E263885EE000EEA13 /* SearchViewController+UI.swift */,
 				98D5825326388607000EEA13 /* SearchViewController+TableView.swift */,
 				98D5825826388628000EEA13 /* SearchViewModel.swift */,
+				9831D400263B3ED600AA4A17 /* RecentSearch */,
 			);
 			path = SearchMovies;
 			sourceTree = "<group>";
@@ -440,6 +463,7 @@
 				98D580AB26354647000EEA13 /* Assets.xcassets in Resources */,
 				98D58159263747FA000EEA13 /* MovieTableViewCell.xib in Resources */,
 				98D5812626374276000EEA13 /* Movie.storyboard in Resources */,
+				9831D3FC263B3EC900AA4A17 /* RecentSearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,13 +607,17 @@
 				98D580ED26373A85000EEA13 /* ErrorResponse.swift in Sources */,
 				98D5824F263885EE000EEA13 /* SearchViewController+UI.swift in Sources */,
 				98D58130263742C7000EEA13 /* StoryboardRouter.swift in Sources */,
+				9831D3F5263B379000AA4A17 /* RecentSearches.swift in Sources */,
 				98D5825426388607000EEA13 /* SearchViewController+TableView.swift in Sources */,
 				98D58246263885CD000EEA13 /* SearchViewController.swift in Sources */,
 				98D5825926388628000EEA13 /* SearchViewModel.swift in Sources */,
+				9831D3FB263B3EC900AA4A17 /* RecentSearchTableViewCell.swift in Sources */,
 				98D580F626373B2B000EEA13 /* Constants.swift in Sources */,
 				98D5812B26374288000EEA13 /* MovieStoryboard.swift in Sources */,
+				9831D3F0263B347B00AA4A17 /* DatabaseHelper.swift in Sources */,
 				98D58141263745BB000EEA13 /* MovieListViewController+UI.swift in Sources */,
 				98D580A426354646000EEA13 /* SceneDelegate.swift in Sources */,
+				9831D405263B47CB00AA4A17 /* Credits.swift in Sources */,
 				98D580DF2637395F000EEA13 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

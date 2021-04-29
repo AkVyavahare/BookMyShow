@@ -22,7 +22,7 @@ class MovieListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc func bookButtonTapped() {
+    func bookButtonTapped(movie: Results) {
         
     }
     

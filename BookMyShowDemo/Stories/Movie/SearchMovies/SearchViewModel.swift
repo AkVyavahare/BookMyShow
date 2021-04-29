@@ -18,6 +18,12 @@ class SearchViewModel {
     var apiSuccess: (() -> Void)?
     var apiFailure: ((ErrorResponse) -> Void)?
     
+    var isSearching: Bool? {
+        didSet {
+            delegate?.viewModelDidUpdate(self)
+        }
+    }
+    
     var movieList: MovieList? {
         didSet {
             delegate?.viewModelDidUpdate(self)
@@ -27,6 +33,12 @@ class SearchViewModel {
     var filteredMovieList: [Results]? {
         didSet {
             delegate?.viewModelDidUpdate(self)
+        }
+    }
+    
+    var recentSeraches: [RecentSearches]? {
+        didSet {
+            
         }
     }
     

@@ -9,29 +9,30 @@ import UIKit
 import SDWebImage
 
 class MovieTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var otherDetailsLabel: UILabel!
     @IBOutlet weak var backgroundContentView: UIView!
     @IBOutlet weak var bookButton: CustomButton!
-    var bookButtonTap: (() -> Void)?
+    var bookButtonTap: ((Results) -> Void)?
     
     var movie: Results? {
         didSet {
             updateUI()
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -68,7 +69,8 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     @objc func bookButtonTapped() {
-        bookButtonTap?()
+        guard let movie = self.movie else { return }
+        bookButtonTap?(movie)
     }
     
     func updateUI() {
@@ -79,5 +81,6 @@ class MovieTableViewCell: UITableViewCell {
         let imageURL = URL(string: URLConstants.imageURL(imageName: movie?.posterPath ?? .empty))
         self.movieImageView.sd_setImage(with: imageURL, completed: nil)
     }
+    
 }
 
