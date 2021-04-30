@@ -16,6 +16,7 @@ extension MovieDetailsViewController {
         setupCrewCollectionView()
         setupCastCollectionView()
         setupSimilarMoviesCollectionView()
+        setupReviewsCollectionView()
     }
     
     func setupLabels() {
@@ -24,6 +25,7 @@ extension MovieDetailsViewController {
         
         movieNameLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         movieNameLabel.textColor = UIColor.white
+        movieNameLabel.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         movieNameLabel.text = "\(viewModel.movie?.title ?? .empty)\n\(viewModel.movie?.releaseDate ?? .empty)"
         
         synopsisTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
@@ -38,6 +40,9 @@ extension MovieDetailsViewController {
         
         similarMoviesTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         similarMoviesTitleLabel.text = StringConstants.youMightAlsoLike
+        
+        reviewsLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        reviewsLabel.text = StringConstants.reviews
     }
     
     func setupImageView() {
@@ -111,10 +116,33 @@ extension MovieDetailsViewController {
         similarMoviesCollectionView.reloadData()
     }
     
+    private func setupReviewsCollectionView() {
+        
+        let cellWidth: CGFloat = ((self.view.frame.size.width) - 15.0)
+        let cellheight: CGFloat = self.reviewsCollectionView.frame.size.height
+        let cellSize = CGSize(width: cellWidth, height: cellheight)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal //.horizontal
+        layout.itemSize = cellSize
+        layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        layout.minimumLineSpacing = 8.0
+        layout.minimumInteritemSpacing = 8.0
+        reviewsCollectionView.setCollectionViewLayout(layout, animated: true)
+        reviewsCollectionView.register(UINib.init(nibName: ReviewCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ReviewCollectionViewCell.identifier)
+        reviewsCollectionView.isScrollEnabled = true
+        reviewsCollectionView.showsHorizontalScrollIndicator = false
+        reviewsCollectionView.delegate = self
+        reviewsCollectionView.dataSource = self
+        reviewsCollectionView.backgroundColor = UIColor.clear
+        reviewsCollectionView.reloadData()
+    }
+    
     func updateUI() {
         crewCollectionView.reloadData()
         castCollectionView.reloadData()
         similarMoviesCollectionView.reloadData()
+        reviewsCollectionView.reloadData()
     }
     
 }

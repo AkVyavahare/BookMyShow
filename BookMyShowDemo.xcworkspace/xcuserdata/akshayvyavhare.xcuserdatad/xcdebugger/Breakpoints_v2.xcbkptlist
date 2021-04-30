@@ -30,10 +30,10 @@
             filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "saveRecentSearches(movie:)"
-            landmarkType = "7">
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "C3F36D62-CB65-414B-8FDD-A19880AC2DC3 - b2ef101bc316edca"
@@ -110,8 +110,8 @@
             filePath = "BookMyShowDemo/Stories/Movie/MovieDetails/MovieDetailsViewController+CollectionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getCrewCell(_:indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "BookMyShowDemo/Stories/Movie/MovieDetails/MovieDetailsViewController+CollectionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "getCrewCell(_:indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "BookMyShowDemo/Stories/Movie/MovieDetails/MovieDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "getMovieCredits(movieId:)"
             landmarkType = "7">
          </BreakpointContent>

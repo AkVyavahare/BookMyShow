@@ -11,6 +11,8 @@ class MovieDetailsViewController: UIViewController {
     
     var viewModel: MovieDetailsViewModel!
     
+    @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var castCollectionView: UICollectionView!
     @IBOutlet weak var similarMoviesTitleLabel: UILabel!
     @IBOutlet weak var crewTitleLabel: UILabel!

@@ -249,15 +249,50 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOo-JI-sjx">
+                                        <rect key="frame" x="16" y="1033" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oVE-2f-lnO">
+                                        <rect key="frame" x="0.0" y="1061.5" width="414" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="SLG-JP-l9o"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ftv-CN-4nA">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ofe-K1-tXC">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PjM-ah-Xhb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GOo-JI-sjx" secondAttribute="trailing" constant="16" id="4pC-eb-HLw"/>
                                     <constraint firstAttribute="trailing" secondItem="KC7-J5-Apd" secondAttribute="trailing" id="50y-Qx-OSx"/>
-                                    <constraint firstAttribute="bottom" secondItem="KC7-J5-Apd" secondAttribute="bottom" constant="100" id="EgD-3h-J2q"/>
+                                    <constraint firstAttribute="trailing" secondItem="oVE-2f-lnO" secondAttribute="trailing" id="Fh4-dn-D2u"/>
                                     <constraint firstItem="KC7-J5-Apd" firstAttribute="leading" secondItem="kuX-np-bKS" secondAttribute="leading" id="M2P-K6-slr"/>
+                                    <constraint firstAttribute="bottom" secondItem="oVE-2f-lnO" secondAttribute="bottom" constant="60" id="Sx2-RL-hyi"/>
                                     <constraint firstItem="udt-9j-gzS" firstAttribute="leading" secondItem="kuX-np-bKS" secondAttribute="leading" id="WpR-06-mSY"/>
                                     <constraint firstItem="udt-9j-gzS" firstAttribute="centerX" secondItem="kuX-np-bKS" secondAttribute="centerX" id="bV0-MA-dCO"/>
                                     <constraint firstItem="KC7-J5-Apd" firstAttribute="top" secondItem="udt-9j-gzS" secondAttribute="bottom" constant="8" id="drY-aH-TIi"/>
+                                    <constraint firstItem="GOo-JI-sjx" firstAttribute="top" secondItem="KC7-J5-Apd" secondAttribute="bottom" constant="16" id="g4h-bE-QPg"/>
+                                    <constraint firstItem="GOo-JI-sjx" firstAttribute="leading" secondItem="kuX-np-bKS" secondAttribute="leading" constant="16" id="tJq-v2-hkr"/>
+                                    <constraint firstItem="oVE-2f-lnO" firstAttribute="leading" secondItem="kuX-np-bKS" secondAttribute="leading" id="tb5-IS-ROu"/>
                                     <constraint firstAttribute="trailing" secondItem="udt-9j-gzS" secondAttribute="trailing" id="tyq-zr-Loa"/>
+                                    <constraint firstItem="oVE-2f-lnO" firstAttribute="top" secondItem="GOo-JI-sjx" secondAttribute="bottom" constant="8" id="y1t-Eq-h55"/>
                                     <constraint firstItem="udt-9j-gzS" firstAttribute="top" secondItem="kuX-np-bKS" secondAttribute="top" id="zUs-Mo-S4q"/>
                                 </constraints>
                             </scrollView>
@@ -280,6 +315,8 @@
                         <outlet property="crewTitleLabel" destination="vlf-dE-if2" id="DX3-a5-AbN"/>
                         <outlet property="movieNameLabel" destination="Ohb-LP-2gU" id="sTD-Rh-BCl"/>
                         <outlet property="overviewLabel" destination="qIt-4e-DPk" id="ac7-jP-Eb9"/>
+                        <outlet property="reviewsCollectionView" destination="oVE-2f-lnO" id="NFK-uT-U1O"/>
+                        <outlet property="reviewsLabel" destination="GOo-JI-sjx" id="HVp-qa-Y33"/>
                         <outlet property="similarMoviesCollectionView" destination="KC7-J5-Apd" id="GOf-55-5Xg"/>
                         <outlet property="similarMoviesTitleLabel" destination="RzY-VY-6xm" id="uvc-1B-ZPx"/>
                         <outlet property="synopsisTitleLabel" destination="csP-0Y-rg6" id="6pc-Dv-v7w"/>

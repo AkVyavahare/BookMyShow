@@ -16,6 +16,8 @@ extension MovieDetailsViewController: UICollectionViewDelegate, UICollectionView
             return viewModel.credits?.cast?.count ?? 0
         case similarMoviesCollectionView:
             return viewModel.similarMovies?.results?.count ?? 0
+        case reviewsCollectionView:
+            return viewModel.reviews?.results?.count ?? 0
         default:
             return 0
         }
@@ -30,6 +32,8 @@ extension MovieDetailsViewController: UICollectionViewDelegate, UICollectionView
             return getCastCell(collectionView, indexPath: indexPath)
         case similarMoviesCollectionView:
             return getMovieCell(collectionView, indexPath: indexPath)
+        case reviewsCollectionView:
+            return getReviewCell(collectionView, indexPath: indexPath)
         default:
             return UICollectionViewCell()
         }
@@ -57,6 +61,14 @@ extension MovieDetailsViewController: UICollectionViewDelegate, UICollectionView
                                                             for: indexPath) as? MovieCollectionViewCell else {fatalError(StringConstants.somethingWentWrong)}
         let movie = viewModel.similarMovies?.results?[indexPath.row]
         cell.movie = movie
+        return cell
+    }
+    
+    func getReviewCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReviewCollectionViewCell.identifier,
+                                                            for: indexPath) as? ReviewCollectionViewCell else {fatalError(StringConstants.somethingWentWrong)}
+        let review = viewModel.reviews?.results?[indexPath.row]
+        cell.review = review
         return cell
     }
     

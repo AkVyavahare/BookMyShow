@@ -33,6 +33,12 @@ class MovieDetailsViewModel {
         }
     }
     
+    var reviews: ReviewsData? {
+        didSet {
+            delegate?.viewModelDidUpdate(self)
+        }
+    }
+    
     init(movie: Results) {
         self.movie = movie
     }
@@ -42,7 +48,7 @@ class MovieDetailsViewModel {
         router.getMovieReviews(config: .getReviews(movieId)) { (res) in
             switch res {
             case .success(let reviews):
-                print(reviews)
+                self.reviews = reviews
             case .failure(let err):
                 print(err)
             }

@@ -27,6 +27,12 @@ class SearchViewController: UIViewController {
     func bookButtonTapped(movie: Results) {
         saveRecentSearches(movie: movie)
     }
+    
+    func showMovieDetailsView(movie: Results) {
+        guard let movieDetails  = MovieStoryboard.detail.controller as? MovieDetailsViewController  else { return }
+        movieDetails.viewModel = MovieDetailsViewModel(movie: movie)
+        self.present(movieDetails, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
@@ -48,14 +54,17 @@ extension SearchViewController: SearchViewModelDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.isSearching = true
+        if searchText == .empty {
+            viewModel.isSearching = false
+        } else {
+            viewModel.isSearching = true
+        }
         let results = viewModel.movieList?.results
         let filtered = results?.filter {
             $0.title?.lowercased().split(separator: " ").first {$0.hasPrefix(searchText.lowercased())} != nil
         }
         self.viewModel.filteredMovieList = filtered
     }
-    
     
     func saveRecentSearches(movie: Results) {
         let recentSearches = RecentSearches.init(json: movie)
@@ -73,6 +82,7 @@ extension SearchViewController: UISearchBarDelegate {
             let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: data, requiringSecureCoding: false)
             userDefaults.set(encodedData, forKey: "Recent" )
             userDefaults.synchronize()
+            showMovieDetailsView(movie: movie)
         } catch { }
     }
     

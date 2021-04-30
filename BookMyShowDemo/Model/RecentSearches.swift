@@ -14,6 +14,7 @@ class RecentSearches: NSObject, NSCoding, Codable {
     var releaseDate: String?
     var id: Int?
     var image: String?
+    var overView: String?
     
     init(json: Results)
     {
@@ -21,6 +22,7 @@ class RecentSearches: NSObject, NSCoding, Codable {
         self.movieName = json.title
         self.releaseDate = json.releaseDate
         self.image = json.posterPath
+        self.overView = json.overview
     }
     
     func encode(with aCoder: NSCoder)
@@ -29,6 +31,7 @@ class RecentSearches: NSObject, NSCoding, Codable {
         aCoder.encode(self.movieName, forKey: "title")
         aCoder.encode(self.releaseDate, forKey: "releaseDate")
         aCoder.encode(self.image,forKey: "posterPath")
+        aCoder.encode(self.overView, forKey: "overview")
     }
     
     required init?(coder aDecoder: NSCoder)
@@ -37,6 +40,7 @@ class RecentSearches: NSObject, NSCoding, Codable {
         self.movieName = aDecoder.decodeObject(forKey: "title") as? String
         self.releaseDate = aDecoder.decodeObject(forKey: "releaseDate") as? String
         self.image = aDecoder.decodeObject(forKey: "posterPath") as? String
+        self.overView = aDecoder.decodeObject(forKey: "overview") as? String
     }
     
 }

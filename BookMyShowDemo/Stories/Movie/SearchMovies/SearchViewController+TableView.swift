@@ -28,6 +28,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if viewModel.isSearching ?? false {
+            guard let movie = self.viewModel.movieList?.results?[indexPath.row] else { return }
+            showMovieDetailsView(movie: movie)
+        } else {
+            let recentSearchedMovie = self.viewModel.recentSeraches?[indexPath.row]
+            guard let movie = self.viewModel.movieList?.results?.filter({$0.id == recentSearchedMovie?.id}).first else { return  }
+            showMovieDetailsView(movie: movie)
+            
+        }
+    }
+    
     fileprivate func getMovieCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeReusableCell(MovieTableViewCell.self) else {return UITableViewCell()}
         let movie = self.viewModel?.filteredMovieList?[indexPath.row]
