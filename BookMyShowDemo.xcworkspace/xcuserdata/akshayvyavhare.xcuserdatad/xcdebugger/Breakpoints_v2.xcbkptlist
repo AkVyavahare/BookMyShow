@@ -23,81 +23,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D3184A52-E267-44B6-BE97-12814842896A"
+            uuid = "C3F36D62-CB65-414B-8FDD-A19880AC2DC3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "getRecentSearches()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "saveRecentSearches(movie:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D1F80C28-705E-4E43-99E9-543495047D9A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "getRecentSearches()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD991D67-61C4-4AD2-885B-7084327AE79B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "searchBar(_:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "37DD9F41-CB33-47DE-A1FB-92E4D54FFAE3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController+TableView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9A7BC9E0-FBD9-4F1B-ADB3-82775EBB1C74"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController+UI.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "updateUI()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C3F36D62-CB65-414B-8FDD-A19880AC2DC3 - b2ef101bc316ed35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookMyShowDemo.SearchViewController.saveRecentSearches(movie: BookMyShowDemo.Results) -&gt; ()"
+                  moduleName = "BookMyShowDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Projects/BookMyShowDemo/BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1392">
+               </Location>
+               <Location
+                  uuid = "C3F36D62-CB65-414B-8FDD-A19880AC2DC3 - af2e062114232362"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BookMyShowDemo.RecentSearches) -&gt; Swift.Bool in BookMyShowDemo.SearchViewController.saveRecentSearches(movie: BookMyShowDemo.Results) -&gt; ()"
+                  moduleName = "BookMyShowDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Projects/BookMyShowDemo/BookMyShowDemo/Stories/Movie/SearchMovies/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

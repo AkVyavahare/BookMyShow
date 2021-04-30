@@ -10,7 +10,8 @@ import UIKit
 
 enum MovieStoryboard: StoryboardRouter {
     case initial
-    // case detail
+    case detail
+    
     var name: String {
         return "Movie"
     }
@@ -18,6 +19,7 @@ enum MovieStoryboard: StoryboardRouter {
     var controller: UIViewController {
         switch self {
         case .initial: return self.getInitialViewController()!
+        case .detail: return self.getViewController(T: MovieDetailsViewController.self)!
         }
     }
 }

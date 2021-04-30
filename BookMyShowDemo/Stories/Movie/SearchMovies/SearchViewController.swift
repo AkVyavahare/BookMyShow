@@ -56,9 +56,16 @@ extension SearchViewController: UISearchBarDelegate {
         self.viewModel.filteredMovieList = filtered
     }
     
+    
     func saveRecentSearches(movie: Results) {
         let recentSearches = RecentSearches.init(json: movie)
         self.viewModel.recentSeraches = getRecentSearches()
+        if self.viewModel.recentSeraches?.count ?? 0 > 5 {
+            self.viewModel.recentSeraches?.removeFirst()
+        }
+        
+        self.viewModel.recentSeraches = self.viewModel.recentSeraches?.filter({$0.id != recentSearches.id})
+        
         self.viewModel.recentSeraches?.append(recentSearches)
         let userDefaults = UserDefaults.standard
         guard let data = self.viewModel.recentSeraches else { return }

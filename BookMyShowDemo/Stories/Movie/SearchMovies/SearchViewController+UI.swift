@@ -28,6 +28,7 @@ extension SearchViewController {
     
     func setupSearchBar() {
         searchBar.delegate = self
+        searchBar.placeholder = StringConstants.searchMovies
     }
     
     func updateUI() {

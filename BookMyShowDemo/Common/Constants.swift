@@ -13,6 +13,7 @@ struct StringConstants {
     static let book = "Book"
     static let movies = "Movies"
     static let recentlySearched = "Recently Searched"
+    static let searchMovies = "Search Movies"
 }
 
 struct URLConstants {
