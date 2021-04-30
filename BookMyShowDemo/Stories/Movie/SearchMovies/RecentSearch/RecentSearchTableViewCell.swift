@@ -55,6 +55,7 @@ class RecentSearchTableViewCell: UITableViewCell {
     func updateUI() {
         self.movieNameLabel.text = recentSearch?.movieName ?? .empty
         
+        
         let imageURL = URL(string: URLConstants.imageURL(imageName: recentSearch?.image ?? .empty))
         self.movieImageVIew.sd_setImage(with: imageURL, completed: nil)
     }

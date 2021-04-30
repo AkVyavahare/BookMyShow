@@ -11,12 +11,16 @@ class MovieDetailsViewController: UIViewController {
     
     var viewModel: MovieDetailsViewModel!
     
+    @IBOutlet weak var castCollectionView: UICollectionView!
+    @IBOutlet weak var similarMoviesTitleLabel: UILabel!
+    @IBOutlet weak var crewTitleLabel: UILabel!
     @IBOutlet weak var castTitleLabel: UILabel!
     @IBOutlet weak var movieNameLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var synopsisTitleLabel: UILabel!
     @IBOutlet weak var backDropImageView: UIImageView!
     @IBOutlet weak var crewCollectionView: UICollectionView!
+    @IBOutlet weak var similarMoviesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieImageView: UIImageView!
     
-    var movie: Results? {
+    var movie: MovieListing? {
         didSet {
             updateUI()
         }
@@ -32,13 +32,14 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func setupLabels() {
-        movieTitleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        movieTitleLabel.font = UIFont.boldSystemFont(ofSize: 12)
     }
     
     func setupImageView() {
         self.movieImageView.clipsToBounds = true
         self.movieImageView.backgroundColor = .gray
         self.movieImageView.layer.cornerRadius = 8.0
+        self.movieImageView.contentMode = .scaleToFill
     }
     
     func setupView() {

@@ -21,6 +21,12 @@ class MovieDetailsViewModel {
         }
     }
     
+    var similarMovies: SimilarMovies? {
+        didSet {
+            delegate?.viewModelDidUpdate(self)
+        }
+    }
+    
     var credits: Credits? {
         didSet {
             delegate?.viewModelDidUpdate(self)
@@ -60,7 +66,7 @@ class MovieDetailsViewModel {
         router.getSimilarMovies(config: .getSimilarMovies(movieId)) { (res) in
             switch res {
             case .success(let movieList):
-                print(movieList)
+                self.similarMovies = movieList
             case .failure(let err):
                 print(err)
             }

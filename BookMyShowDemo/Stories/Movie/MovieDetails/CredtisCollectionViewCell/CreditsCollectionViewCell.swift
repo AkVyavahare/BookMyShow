@@ -14,7 +14,13 @@ class CreditsCollectionViewCell: UICollectionViewCell {
     
     var crew: Cast? {
         didSet {
-            updateUI()
+            updateCrewUI()
+        }
+    }
+    
+    var cast: Cast? {
+        didSet {
+            updateCastUI()
         }
     }
     
@@ -44,11 +50,19 @@ class CreditsCollectionViewCell: UICollectionViewCell {
         crewName.font = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
-    func updateUI() {
+    func updateCrewUI() {
         crewName.text = crew?.name ?? .empty
         
-       // crewImageView.layer.cornerRadius = crewImageView.frame.size.width / 2
+        self.crewImageView.layoutIfNeeded()
         let imageURL = URL(string: URLConstants.imageURL(imageName: crew?.profilePath ?? .empty))
+        self.crewImageView.sd_setImage(with: imageURL, completed: nil)
+    }
+    
+    func updateCastUI() {
+        crewName.text = cast?.name ?? .empty
+        
+        self.crewImageView.layoutIfNeeded()
+        let imageURL = URL(string: URLConstants.imageURL(imageName: cast?.profilePath ?? .empty))
         self.crewImageView.sd_setImage(with: imageURL, completed: nil)
     }
 }

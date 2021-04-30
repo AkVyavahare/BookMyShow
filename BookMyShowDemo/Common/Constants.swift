@@ -17,6 +17,7 @@ struct StringConstants {
     static let synopsis = "Synopsis:"
     static let cast = "Cast"
     static let crew = "Crew"
+    static let youMightAlsoLike = "You might also like"
 }
 
 struct URLConstants {
