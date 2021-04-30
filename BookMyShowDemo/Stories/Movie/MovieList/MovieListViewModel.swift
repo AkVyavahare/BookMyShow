@@ -35,7 +35,7 @@ class MovieListViewModel {
             case .success(let movies):
                 self.movieList = movies
             case .failure(let err):
-                print(err.message)
+                print(err)
             }
         }
     }

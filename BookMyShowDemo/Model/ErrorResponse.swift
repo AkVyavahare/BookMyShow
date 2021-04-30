@@ -8,5 +8,13 @@
 import Foundation
 
 struct ErrorResponse: Decodable, Error {
-    var messageCode: String, message: String
+    let statusMessage: String?
+    let success: Bool?
+    let statusCode: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case statusMessage = "status_message"
+        case success
+        case statusCode = "status_code"
+    }
 }

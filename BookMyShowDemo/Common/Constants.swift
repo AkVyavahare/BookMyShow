@@ -14,21 +14,27 @@ struct StringConstants {
     static let movies = "Movies"
     static let recentlySearched = "Recently Searched"
     static let searchMovies = "Search Movies"
+    static let synopsis = "Synopsis:"
+    static let cast = "Cast"
+    static let crew = "Crew"
 }
 
 struct URLConstants {
     static let baseURL = "https://api.themoviedb.org/3/"
-    static func getMoviesUrl() -> String {return "movie/now_playing?api_key=\(StringConstants.apiKey)"}
+    static func getMoviesUrl() -> String {
+        return "movie/now_playing?api_key=\(StringConstants.apiKey)"
+        
+    }
     static func getSimilarMoviesUrl(movieId: Int) -> String {
-        return "/movie/\(movieId)/similar?api_key=\(StringConstants.apiKey)"
+        return "movie/\(movieId)/similar?api_key=\(StringConstants.apiKey)&language=en-US"
     }
     
     static func getMovieCreditsUrl(movieId: Int) -> String {
-        return "/movie/\(movieId)/credits?api_key=\(StringConstants.apiKey)"
+        return "movie/\(movieId)/credits?api_key=\(StringConstants.apiKey)"
     }
     
     static func getMovieReviewsUrl(movieId: Int) -> String {
-        return "/movie/\(movieId)/reviews?api_key=\(StringConstants.apiKey)"
+        return "movie/\(movieId)/reviews?api_key=\(StringConstants.apiKey)"
     }
     
     static func imageURL(imageName: String) -> String {

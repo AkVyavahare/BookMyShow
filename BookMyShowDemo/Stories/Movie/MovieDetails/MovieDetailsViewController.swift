@@ -9,10 +9,36 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
     
+    var viewModel: MovieDetailsViewModel!
+    
+    @IBOutlet weak var castTitleLabel: UILabel!
+    @IBOutlet weak var movieNameLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var synopsisTitleLabel: UILabel!
+    @IBOutlet weak var backDropImageView: UIImageView!
+    @IBOutlet weak var crewCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         setupUI()
+        getMovieCredits()
+        getMoviewReviews()
+        getSimilarMovies()
         // Do any additional setup after loading the view.
+    }
+    
+    func getMoviewReviews() {
+        viewModel.getMovieReviews(movieId: viewModel.movie?.id ?? 0)
+    }
+    
+    func getMovieCredits() {
+        viewModel.getMovieCredits(movieId: viewModel.movie?.id ?? 0)
+    }
+    
+    func getSimilarMovies() {
+        viewModel.getSimilarMovies(movieId: viewModel.movie?.id ?? 0)
+        
     }
     
     
@@ -27,3 +53,13 @@ class MovieDetailsViewController: UIViewController {
      */
     
 }
+
+extension MovieDetailsViewController: MovieDetailsViewModelDelegate {
+    func viewModelDidUpdate(_ viewModel: MovieDetailsViewModel) {
+        self.viewModel = viewModel
+        updateUI()
+    }
+    
+    
+}
+

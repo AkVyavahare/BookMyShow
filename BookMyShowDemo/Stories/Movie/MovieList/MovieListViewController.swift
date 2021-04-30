@@ -23,7 +23,13 @@ class MovieListViewController: UIViewController {
     }
     
     func bookButtonTapped(movie: Results) {
-        
+        showMovieDetailsView(movie: movie)
+    }
+    
+    func showMovieDetailsView(movie: Results) {
+        guard let movieDetails  = MovieStoryboard.detail.controller as? MovieDetailsViewController  else { return }
+        movieDetails.viewModel = MovieDetailsViewModel(movie: movie)
+        self.present(movieDetails, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

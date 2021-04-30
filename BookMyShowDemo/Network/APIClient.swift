@@ -28,27 +28,26 @@ extension APIClient {
                         }
                     }
                     catch {
-                        completion(nil, self.generateErroModel())
+                        completion(nil, self.generateErrorModel())
                     }
                     
                 case .failure :
                     do {
-                        
                         if let data = response.data {
                             let errors = try JSONDecoder().decode([String: [String: [ErrorResponse]]].self, from: data)
                             guard let error = errors.values.first?.values.first else {
-                                completion(nil, self.generateErroModel())
+                                completion(nil, self.generateErrorModel())
                                 return
                             }
                             completion(nil, error[0])
-                            
+
                         } else {
-                            
-                            completion(nil, self.generateErroModel())
+
+                            completion(nil, self.generateErrorModel())
                         }
-                        
+
                     } catch {
-                        completion(nil, self.generateErroModel())
+                        completion(nil, self.generateErrorModel())
                     }
                 }
             }
@@ -57,29 +56,28 @@ extension APIClient {
     func performRequest<T: Decodable>(config: APIConfiguration, decode: @escaping (Decodable) -> T?, completion: @escaping  (Result<T, ErrorResponse>) -> Void) {
         do {
             try decodingTask(with: config.asURLRequest(), decodingType: T.self) { (json, error) in
-                
                 DispatchQueue.main.async {
                     guard let json = json else {
                         if let error = error {
                             completion(Result.failure(error))
                         } else {
-                            completion(Result.failure(self.generateErroModel()!))
+                            completion(Result.failure(self.generateErrorModel()!))
                         }
                         return
                     }
                     if let value = decode(json) {
                         completion(.success(value))
                     } else {
-                        completion(Result.failure(self.generateErroModel()!))
+                        completion(Result.failure(self.generateErrorModel()!))
                     }
                 }
             }
         } catch {
-            completion(Result.failure(self.generateErroModel()!))
+            completion(Result.failure(self.generateErrorModel()!))
         }
     }
-    func generateErroModel(_ noInternet: Bool = false) -> ErrorResponse? {
-        return ErrorResponse(messageCode: .empty , message: StringConstants.somethingWentWrong)
+    func generateErrorModel(_ noInternet: Bool = false) -> ErrorResponse? {
+        return ErrorResponse(statusMessage: StringConstants.somethingWentWrong, success: false, statusCode: 401)
     }
     
 }
